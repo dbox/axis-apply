@@ -1,0 +1,176 @@
+extends(src='layout.sgr')
+  block(name='content')
+    main
+      h3 Headings
+      hgroup
+        h1 h1 Axis Kitchen sink
+        h2 h2 Back in my quaint garden
+        h3 h3 JauntyVestibulum id ligula porta felis euismod semper. Donec ullamcorper n
+        h4 h4 JauntyVestibulum id ligula porta felis euismod semper. Donec ullamcorper n
+        h5 h5 JauntyVestibulum id ligula porta felis euismod semper. Donec ullamcorper n
+        h6 h6 JauntyVestibulum id ligula porta felis euismod semper. Donec ullamcorper n
+      hr
+      h3 Paragraph
+      p(md)  Donec [ullamcorper nulla](#) maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
+      hr
+      h3 code
+      div.cf
+        p(md) This is an improved `inline code block`. It now flows within a paragraph of text much more nicely. Lorem ipsum dolor set amit.
+      hr
+      h3 pre
+      pre(retext-skip).
+        pre
+          @apply --pre
+      hr
+      h3 small
+      p.reset-link(md) this [paragraph](#) is normal
+      small This one is smal
+      br
+      br
+      section
+        h3 blockquote
+          blockquote
+            p I hate when I'm on a flight and I wake up with a water bottle next to me like oh great now I gotta be responsible for this water bottle.
+            cite Kanye West
+      br
+      h3 ellipsis
+      div.ellipsis Sometimes you have to truncate verbose lines, and that's all there is to say
+      br
+      h3 unordered list
+      ul.default
+        li I'm a list
+          ul
+            li i'm nested
+            li cool to nest
+        li so cool to be
+        li the list that I am
+      br
+      h3 ordered list
+      ol
+        li First
+        li Second
+        li Third
+      h3 inline list
+      br
+      ul.inline
+        li I'm a list
+        li so cool to be
+        li the list that I am
+      br
+      h3 reset list
+      ul.reset
+        li I'm a list
+        li so cool to be
+        li the list that I am
+      h3 button
+      a.btn Click me
+      a.btn.large Bigger Button
+      a.btn.small Smaller button
+      h3 outline button
+      a.btn.outline Click me
+      a.btn.large.outline Bigger Button
+      a.btn.small.outline Smaller button
+      h3 disabled button
+      a.btn.disabled Don't click me
+      br
+      h3 Interaction
+      a.btn.down(#) click down
+      a.btn.inset(#) click inset
+      a.btn.shrink(#) click shrink
+      a.btn.hover-pop(#) hover-pop
+      a(#) hover-underline
+      hr
+      h3 Forms
+      form
+        p
+          label(for='example-input-email') Email address:
+          input#example-input-email(name='email' type='email', placeholder='Enter email')
+        p
+          label(for='example-input-password1') Number:
+          input#example-input-number(type='number', placeholder='Number')
+        p
+          label(for='example-input-password') Password:
+          input#example-input-password(type='password', placeholder='Password')
+        p
+          label(for='example-input-search') Search:
+          input#example-input-serach(type='search', placeholder='Search ..')
+        p
+          label(for='example-input-tel') Telephone number:
+          input#example-input-tel(type='tel', placeholder='Telephone number')
+        p
+          label(for='example-input-text') Text:
+          input#example-input-text(type='text', placeholder='Enter some text here')
+        p
+          label(for='example-input-url') Url:
+          input#example-input-url(type='url', placeholder='Enter a url here')
+        p
+          label(for='example-input-color') Color:
+          input#example-inupt-color(type='color', placeholder='#fff')
+        p
+          label(for='example-input-date') Date:
+          input#example-input-date(type='date', placeholder='date')
+        p
+          label(for='example-input-date-time') Date / Time:
+          input#example-input-date-time(type='datetime', placeholder='date / time')
+        p
+          label(for='example-input-date-time-local') Date / Time local:
+          input#example-input-date-time-local(type='datetime-local', placeholder='date / time local')
+        p
+          label(for='example-input-month') Month:
+          input#example-input-month(type='month', placeholder='Month')
+        p
+          label(for='example-input-week') Week:
+          input#example-input-week(type='week', placeholder='Week')
+        p
+          label(for='example-input-time') Time:
+          input#example-input-time(type='time', placeholder='Time')
+        p
+          label(for='example-select1') Example select:
+          div.select-box
+            select#example-select1
+              option Goldenrod
+              option Dodgerblue
+              option Tomato
+              option Orange
+              option Rebeccapurple
+        p
+          label(for='example-select2') Example multiple select
+          select#example-select2(multiple='')
+            option Democrat
+            option Rebublican
+            option Green
+            option Libertarian
+            option Whig
+        p
+          label(for='example-textarea') Example textarea
+          textarea#example-textarea(rows='3')
+        p
+          label(for='example-input-file') File input
+          input#example-input-file(type='file')
+        p
+          fieldset
+            legend Radio buttons:
+            div
+              label
+                input#optionsR-radios1(type='radio', name='options-radios', value='option1', checked='')
+                |  Option one is this and that—be sure to include why it's great
+            div
+              label
+                input#options-radios2(type='radio', name='options-radios', value='option2')
+                |  Option two can be something else and selecting it will deselect option one
+            div
+              label
+                input#options-radios3(type='radio', name='optionsRadios', value='option3', disabled='')
+                |  Option three is disabled
+        p
+          fieldset
+            legend Checkboxes:
+            input(type='checkbox')
+            |  Check me out
+            input(type='checkbox')
+            |  Or check me out
+        p
+          button(type='button', name='button') Button
+          input(type='button', name='input', value='Input Button')
+          input(type='submit', name='submit', value='Submit Button')
+          input(type='reset', name='reset', value='Reset Button')
