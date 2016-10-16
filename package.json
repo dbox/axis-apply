@@ -1,12 +1,12 @@
 {
-  "name": "mbc-spike",
-  "description": "madebycardinal.com",
+  "name": "Axis Apply",
+  "description": "axis apply",
   "version": "0.0.1",
   "author": "dbox",
   "ava": {
     "verbose": "true"
   },
-  "bugs": "https://github.com/dbox/mbc-spike/issues",
+  "bugs": "https://github.com/dbox/axis-apply/issues",
   "dependencies": {
     "babel-preset-latest": "^6.16.0",
     "image-webpack-loader": "^2.0.0",
