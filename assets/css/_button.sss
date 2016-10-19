@@ -2,11 +2,6 @@
 // Button
 // ------
 
-// TODO:
-//   - margin?
-//   - additive
-//   - comments
-
 :root
   // base styling needed for --button
   --button-base
@@ -18,7 +13,7 @@
     border: var(--button-outline-stroke) solid var(--button-color)
     border-radius: var(--global-border-radius)
     background-color: var(--button-color)
-    color: #fff
+    color: var(--button-text-color)
     user-select: none
 
     &:hover, &:active
@@ -28,20 +23,20 @@
   // the button
   --button
     @apply --button-base
-    padding: calc(var(--button-med-font-size) * .6) calc(var(--button-med-font-size) * .8)
-    font-size: var(--button-med-font-size)
+    padding: calc(var(--button-med-size) * .6) calc(var(--button-med-size) * .8)
+    font-size: var(--button-med-size)
 
   // the button ,larger
   --button-large
     @apply --button-base
-    padding: calc(var(--button-large-font-size) * .6) calc(var(--button-large-font-size) * .8)
-    font-size: var(--button-large-font-size)
+    padding: calc(var(--button-large-size) * .6) calc(var(--button-large-size) * .8)
+    font-size: var(--button-large-size)
 
   // the button, smaller
   --button-small
     @apply --button-base
-    padding: calc(var(--button-small-font-size) * .6) calc(var(--button-small-font-size) * .8)
-    font-size: var(--button-small-font-size)
+    padding: calc(var(--button-small-size) * .6) calc(var(--button-small-size) * .8)
+    font-size: var(--button-small-size)
 
   // outline button
   --button-outline

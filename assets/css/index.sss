@@ -8,51 +8,40 @@
 @import '_forms.sss'
 @import '_reset.sss'
 
-@alias
-  col: lost-column
-
-
-body
-  padding: 50px
-  /*@apply --debug*/
-
-a
-  font-weight: 600
-
-
-main
-  lost-center: 800px
-
-section
-  clear: fix
-
-
-
-
 :root
-  @apply --base
-  @apply --typography
-  @apply --code-blocks
-  @apply --forms
-  @apply --buttons
-  @apply --border-box-html
+  --axis-framework
+    @apply --base
+    @apply --typography
+    @apply --code-blocks
+    @apply --forms
+    @apply --buttons
+    @apply --layout
+    @apply --border-box-html
+
+
+// Demo styling:
+:root
+  @apply --axis-framework
+
+  // User would overwrite settings file rules here.
 
   --label-display: block // switch to block to stack above form
   --label-align: left
   --label-min-width: 150px
   --input-min-width: 200px
 
+body
+  padding: 50px
 
-form p label
-  /*min-width: 150px
-  display: inline-block
-  text-align: right*/
+a
+  font-weight: 600
 
+main
+  max-width: 800px
+  margin: 0 auto
 
-
-
-.select-box
-  @apply --select-box
+section
+  clear: fix
 
 hr
   @apply --hr
@@ -84,11 +73,13 @@ hgroup
 
 .btn.small
   @apply --button-small
+
   &.outline
     @apply --button-outline
 
 .btn.large
   @apply --button-large
+
   &.outline
     @apply --button-outline
 
@@ -97,11 +88,12 @@ hgroup
 
 .shrink
   @apply --click-shrink
+
 .down
   @apply --click-down
+
 .hover-pop
   @apply --hover-pop
-
 
 section
   clear: fix
@@ -136,34 +128,5 @@ section > div
   col: 1/4 0 0
 
 
-
 .warning
   @apply --input-warning
-
-
-.widescreen
-  aspect-ratio: 16:9
-
-
-.ratio-wrap
-  position: absolute
-  height: 100%
-  width: 100%
-  border: 3px solid blue
-
-  & .content-wrap
-    @apply --center-xy
-    height: inherit
-    border: 5px solid black
-
-.triangle
-  border: 1px solid green
-  position: relative
-  height: 50px
-
-  &:after
-    triangle: 10px left var(--color-primary)
-    content: ''
-    position: absolute
-    top: 0
-    left: -20px

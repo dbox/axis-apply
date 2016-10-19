@@ -4,14 +4,12 @@
 
 :root
 
-  // TODO
-  // glow off by default?
-  // select width defaults
+  // Todo: Select (Q+A), checkboxes, radio-buttons
 
   --input
     @apply --transition
     font-size: var(--base-font-size)
-    font-weight: 300
+    font-weight: var(--base-font-weight)
     border: var(--input-stroke) solid var(--input-border-color)
     border-radius: var(--global-border-radius)
     height: var(--input-height)
@@ -76,6 +74,7 @@
     width: var(--input-width)
     min-width: var(--input-min-width)
     max-width: var(--input-max-width)
+    border-radius: var(--global-border-radius)
     /*max-width: var(--input-max-width)*/
 
     & select
@@ -97,18 +96,19 @@
       content: ''
       position: absolute
       top: calc(50% - (var(--input-select-arrow-size) / 2))
-      right: 1em
+      right: .75em
       z-index: 2
       display: none
       pointer-events: none
 
-
     @supports ( -webkit-appearance: none ) or ( appearance: none ) or ( ( -moz-appearance: none ) and ( mask-type: alpha ) )
+      border: var(--fieldset-border)
+
       &:after
         display: block
         border-left: var(--input-select-arrow-size) solid transparent
         border-right: var(--input-select-arrow-size) solid transparent
-        border-top: var(--input-select-arrow-size) solid #f00
+        border-top: var(--input-select-arrow-size) solid var(--input-select-arrow-color)
 
       & select
         border-radius: var(--global-border-radius)
@@ -174,3 +174,6 @@
 
     & fieldset
       @apply --fieldset
+
+    & .select-box
+      @apply --select-box

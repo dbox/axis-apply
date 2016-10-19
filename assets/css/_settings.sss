@@ -1,5 +1,4 @@
 :root
-
   // Defaults
   --global-border-radius: 2px
   --default-border: 1px solid color(var(--base-gray) tint(70%))
@@ -7,12 +6,19 @@
   --default-transition-duration: .3s
 
   // Typography settings
-  --font-stack: var(--sans)     // Set default font stack (see below)
-  --base-font-size: 16px        // Base rem off this number
+  --font-stack: var(--sans)     // Set here or use a font-stack from below
+  --base-font-size: 16px        // Rem is based off this number
+  --base-font-weight: 300
   --line-height: 1.5            // Default line height
   --heading-size-multiplier: 1  // Scale all headers at once - 1 is 100%
   --heading-line-height: 1.3    // Change line-height across all headings.
   --text-margin: .75rem 0       // Default text margin
+
+  // Font stacks
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  --helvetica: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif
+  --serif: Georgia, Cambria, 'Times New Roman', Times, serif
+  --monospace: Monaco, Menlo, Consolas, 'Courier New', monospace
 
   // Colors
   --base-gray: #767d84          // Allows all grays to have consistent tint
@@ -21,21 +27,19 @@
   --color-warning: #d83030
   --selection-highlight: color(var(--color-primary) a(15%))
 
-  // Font stacks
-  // TODO: - Should these live here or in _typography ?
-  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
-  --helvetica: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif
-  --serif: Georgia, Cambria, 'Times New Roman', Times, serif
-  --monospace: Monaco, Menlo, Consolas, 'Courier New', monospace
-
-  // Button settings
-  --button-med-font-size: .9rem
-  --button-large-font-size: 1.3rem
-  --button-small-font-size: .75rem
+  // Buttons
+  --button-med-size: .9rem
+  --button-large-size: 1.3rem
+  --button-small-size: .75rem
   --button-outline-stroke: 1px
   --button-color: var(--color-primary)
+  --button-text-color: #fff
 
-  // form settings
+  // Layout
+  --hr-color: color(var(--base-gray) a(30%))
+  --hr-size: 1px
+
+  // Forms
   --input-width: auto // 100% to fill container
   --input-max-width: 25rem
   --input-min-width: auto
@@ -48,11 +52,13 @@
   --input-autofill-bg-color: var(--base-gray)
   --input-autofill-color: white
 
-  --input-select-max-width: var(--input-max-width)
-  --input-select-arrow-size: .4em
-
   --label-display: inline-block // switch to block to stack above form
-  --label-align: right
+  --label-align: left
   --label-min-width: 350px
 
   --fieldset-border: var(--default-border)
+
+  // select box
+  --input-select-max-width: var(--input-max-width)
+  --input-select-arrow-color: var(--base-gray)
+  --input-select-arrow-size: .4em

@@ -2,18 +2,14 @@
 // Layout
 // ------
 
-// TODO: in progress
-
 :root
-  --center-xy
-    display: flex
-    align-items: center
-    justify-content: center
+  // hr - horizontal rule preset
+  --hr
+    border: 0
+    border-bottom: var(--hr-size) solid var(--hr-color)
+    height: 0
+    padding: 0
+    margin: 1.5rem 0
 
-  --center-x
-    display: flex
-    justify-content: center
-
-  --center-y
-    display: flex
-    align-items: center
+  --layout
+    @apply --hr
