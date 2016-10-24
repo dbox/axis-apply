@@ -1,34 +1,30 @@
-@import '_settings.sss'
-@import '_interaction.sss'
-@import '_typography.sss'
-@import '_code.sss'
-@import '_utilities.sss'
-@import '_layout.sss'
-@import '_button.sss'
-@import '_forms.sss'
-@import '_reset.sss'
+@import '_axis/_index.sss'
+
+// Calls entire framework.
+@apply --axis-framework
+
+// .. or ptionally call any of the individual additive mixins:
+// @apply --base
+// @apply --typography
+// @apply --code-blocks
+// @apply --forms
+// @apply --buttons
+// @apply --layout
+// @apply --border-box-html
+
+
 
 :root
-  --axis-framework
-    @apply --base
-    @apply --typography
-    @apply --code-blocks
-    @apply --forms
-    @apply --buttons
-    @apply --layout
-    @apply --border-box-html
-
-
-// Demo styling:
-:root
-  @apply --axis-framework
-
   // Example overwriting settings file.
-
   --label-display: block // switch to block to stack above form
   --label-align: left
   --label-min-width: 150px
   --input-min-width: 200px
+  --heading-size-multiplier: 1.2
+
+
+
+// Demo styles, disregard
 
 body
   padding: 50px

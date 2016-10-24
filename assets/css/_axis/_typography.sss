@@ -20,6 +20,12 @@
     opacity: .7
     font-weight: normal
 
+  // heading base - used across all headings below
+
+  --heading-base
+    display: var(--heading-display)
+    font-weight: var(--heading-font-weight)
+
   // heading sizes, used in headings below
   --h1-size: calc(2.4rem * var(--heading-size-multiplier))
   --h2-size: calc(1.8rem * var(--heading-size-multiplier))
@@ -30,40 +36,48 @@
 
   // h1 preset
   --h1
+    @apply --heading-base
     margin: calc(var(--h1-size) * .75) 0
     font-size: var(--h1-size)
     line-height: var(--heading-line-height)
 
   // h2 preset
   --h2
+    @apply --heading-base
     margin: calc(var(--h2-size) * .75) 0
     font-size: var(--h2-size)
     line-height: var(--heading-line-height)
 
   // h3 preset
   --h3
+    @apply --heading-base
     margin: calc(var(--h3-size) * .75) 0
     font-size: var(--h3-size)
     line-height: var(--heading-line-height)
 
   // h4 preset
   --h4
+    @apply --heading-base
     margin: calc(var(--h4-size) * .75) 0
     font-size: var(--h4-size)
     line-height: var(--heading-line-height)
 
   // h5 preset
   --h5
+    @apply --heading-base
     margin: calc(var(--h5-size) * .75) 0
     font-size: var(--h5-size)
     line-height: var(--heading-line-height)
 
+
   // h6 preset
   --h6
+    @apply --heading-base
     margin: calc(var(--h6-size) * .75) 0
     font-size: var(--h6-size)
     line-height: var(--heading-line-height)
     text-transform: uppercase
+
 
   // blockquote preset
   --blockquote
@@ -105,7 +119,6 @@
   // Default styling for links
   --link
     color: var(--color-primary)
-    @apply --hover-underline
     text-decoration: none
     @apply --transition
 
@@ -167,38 +180,38 @@
   // Additive
 
   --base
-    & html
+    html
       font-size: var(--base-font-size)
 
-    & body
+    body
       font-family: var(--font-stack)
       font-size: var(--base-font-size)
-      color: color(var(--base-gray) shade(35%))
+      color: color(var(--font-color))
 
   --headers
-    & h1
+    h1
       @apply --h1
 
-    & h2
+    h2
       @apply --h2
 
-    & h3
+    h3
       @apply --h3
 
-    & h4
+    h4
       @apply --h4
 
-    & h5
+    h5
       @apply --h5
 
-    & h6
+    h6
       @apply --h6
 
   --lists
-    & ul
+    ul
       @apply ul
 
-    & li
+    li
       @apply li
 
   --typography
@@ -207,11 +220,11 @@
     @apply --lists
     @apply --text-selection
 
-    & p
+    p
       @apply --p
 
-    & a
+    a
       @apply --link
 
-    & blockquote
+    blockquote
       @apply --blockquote

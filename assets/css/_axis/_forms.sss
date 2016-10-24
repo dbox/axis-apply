@@ -64,7 +64,7 @@
     border: var(--fieldset-border)
     border-radius: var(--global-border-radius)
 
-  //select box
+  // select box
   // Must be applied to element wrapping <select> tag.
   // TODO: ie 10 + 11 support
 
@@ -134,46 +134,46 @@
   // Adds default form styling
 
   --forms
-    & input[type='email'],
-    & input[type='number'],
-    & input[type='password'],
-    & input[type='search'],
-    & input[type='tel'],
-    & input[type='text'],
-    & input[type='url'],
-    & input[type='color'],
-    & input[type='date'],
-    & input[type='datetime'],
-    & input[type='datetime-local'],
-    & input[type='month'],
-    & input[type='time'],
-    & input[type='week'],
-    & textarea
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    input[type='color'],
+    input[type='date'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='month'],
+    input[type='time'],
+    input[type='week'],
+    textarea
       @apply --input
       @apply --autofill
 
-    & input[type='reset'],
-    & input[type='button'],
-    & input[type='submit']
+    input[type='reset'],
+    input[type='button'],
+    input[type='submit']
       @apply --button
       @apply --button-outline
 
-    & select
+    select
       @apply --input
 
     //overwrites for color
-    & input[type='color']
+    input[type='color']
       padding: .2rem
       width: 3rem
       max-width: 3rem
       min-width: 2rem
       height: 2rem
 
-    & label
+    label
       @apply --label
 
-    & fieldset
+    fieldset
       @apply --fieldset
 
-    & .select-box
+    .select-box
       @apply --select-box

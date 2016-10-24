@@ -63,6 +63,15 @@
 
   // additive
   --buttons
-    & button,
-    & .btn
+    button,
+    .btn
       @apply --button
+
+      &.large
+        @apply --button-large
+      &.small
+        @apply --button-small
+      &.outline
+        @apply --button-outline
+      &.disabled
+        @apply --button-disabled

@@ -7,11 +7,14 @@
 
   // Typography settings
   --font-stack: var(--sans)     // Set here or use a font-stack from below
+  --font-color: color(var(--base-gray) shade(35%))
   --base-font-size: 16px        // Rem is based off this number
   --base-font-weight: 300
   --line-height: 1.5            // Default line height
   --heading-size-multiplier: 1  // Scale all headers at once - 1 is 100%
   --heading-line-height: 1.3    // Change line-height across all headings.
+  --heading-font-weight: normal
+  --heading-display: block
   --text-margin: .75rem 0       // Default text margin
 
   // Font stacks
@@ -60,5 +63,8 @@
 
   // select box
   --input-select-max-width: var(--input-max-width)
-  --input-select-arrow-color: var(--base-gray)
+  --input-select-arrow-color: color(var(--base-gray) tint(50%))
   --input-select-arrow-size: .4em
+
+@alias
+  col: lost-column
