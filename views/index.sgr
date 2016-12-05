@@ -147,28 +147,41 @@ extends(src='layout.sgr')
         p
           label(for='example-input-file') File input
           input#example-input-file(type='file')
-        p
-          fieldset
-            legend Radio buttons:
-            div
-              label
-                input#optionsR-radios1(type='radio', name='options-radios', value='option1', checked='')
-                |  Option one is this and that—be sure to include why it's great
-            div
-              label
-                input#options-radios2(type='radio', name='options-radios', value='option2')
-                |  Option two can be something else and selecting it will deselect option one
-            div
-              label
-                input#options-radios3(type='radio', name='optionsRadios', value='option3', disabled='')
-                |  Option three is disabled
-        p
-          fieldset
-            legend Checkboxes:
-            input(type='checkbox')
-            |  Check me out
-            input(type='checkbox')
-            |  Or check me out
+
+        div
+          h3 Checkbox
+          div
+            input#1(type='checkbox', name='layout', value='option1')
+            label.pull-right.text(for='1')
+              | Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.
+          div
+            input#2(type='checkbox', name='layout', checked='checked')
+            label.pull-right.text(for='2') Checked
+          div
+            input#3(type='checkbox', name='layout', value='option2', disabled='disabled')
+            label.pull-right.text(style='color: #ccc;', for='3') Disabled
+          div
+            input#4(type='checkbox', name='layout', checked='checked', disabled='disabled')
+            label.pull-right.text(style='color: #ccc;', for='4') Checked && Disabled
+        br
+        br
+        div
+          h3 Radio
+          div
+            input#11(type='radio', name='radio', value='option1')
+            label(for='11') Normal
+          div
+            input#22(type='radio', name='radio', value='option2', checked='checked')
+            label(for='22') Checked
+          div
+            input#33(type='radio', value='option2', disabled='disabled')
+            label(for='33', style='color: #ccc;') Disabled
+          div
+            input#44(type='radio', value='option2', disabled='disabled', checked='checked')
+            label(for='44', style='color: #ccc;')
+              | Checked &&
+              | Disabled
+
         p
           button(type='button', name='button') Button
           input(type='button', name='input', value='Input Button')
