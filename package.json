@@ -15,6 +15,7 @@
     "postcss-shape": "0.0.1",
     "postcss-simple-vars": "^3.0.0",
     "reshape-standard": "^0.3.0",
+    "spike": "^0.12.1",    
     "spike-css-standards": "^0.1.2",
     "spike-page-id": "^0.1.0",
     "standard": "^8.4.0",
