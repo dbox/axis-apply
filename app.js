@@ -7,23 +7,19 @@ const lost = require('lost')
 const aspectRatio = require('postcss-aspect-ratio')
 const shape = require('postcss-shape')
 
+
 module.exports = {
   devtool: 'source-map',
-  matchers: {
-    html: '**/*.sgr',
-    css: '**/*.sss'
-  },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*'],
+  ignore: ['**/layout.html', '**/_*', '**/.*'],
   reshape: (ctx) => {
     return htmlStandards({
+      parser: false,
       webpack: ctx,
-      locals: { pageId: pageId(ctx), foo: 'bar' }
+      locals: { foo: 'bar' }
     })
   },
   postcss: (ctx) => {
-    const std = cssStandards({ webpack: ctx })
-    std.plugins.push(simpleVars, lost, aspectRatio, shape)
-    return std
+    return cssStandards({ parser: false, webpack: ctx })
   },
-  babel: { presets: [jsStandards] }
+  babel: { presets: [latest] }
 }
